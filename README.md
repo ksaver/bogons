@@ -44,7 +44,7 @@ Public: 18.160.156.xxx
 - Showing only local IP addresses from a file:
 
 ```shell
-> ././bogons.py -f ips.txt --only-local
+> ./bogons.py -f ips.txt --only-local
 10.252.11.xxx
 10.252.21.xx
 172.20.22.xx
@@ -53,7 +53,7 @@ Public: 18.160.156.xxx
 - Showing only public IP addresses from a file:
 
 ```shell
-./bogons.py -f ips.txt --only-public
+> ./bogons.py -f ips.txt --only-public
 199.187.193.xxx
 201.149.59.x
 52.115.223.xxx
