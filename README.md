@@ -16,6 +16,13 @@ Bogon: 10.0.0.1
 >
 > ./bogons.py -a 127.0.0.1
 Bogon: 127.0.0.1
+>
+> ./bogons.py -a 8.8.8.8
+Public: 8.8.8.8
+>
+> ./bogons.py -a 208.80.153.224
+Public: 208.80.153.224
+>
 ```
 
 - With a file containing a list of IP addresses:
