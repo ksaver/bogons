@@ -33,7 +33,7 @@ def is_bogon(ip_address):
     # if an IP address is not global, then it's a bogon,
     # also multicast ip addresses are considered bogons...
     ip = ipaddress.ip_address(ip_address)
-    return ip.is_private or ip.is_multicast or ip.is_reserverd
+    return ip.is_private or ip.is_multicast or ip.is_reserved
 
 
 def output_results(ip, args):
