@@ -20,6 +20,7 @@ def parse_args():
     args = parser.parse_args()
     return args
 
+
 def is_valid_ip(ip_address):
     try:
         ipaddress.ip_address(ip_address)
@@ -27,10 +28,13 @@ def is_valid_ip(ip_address):
     except ValueError:
         return False
 
+
 def is_bogon(ip_address):
-    # if an IP address is not global, then it is bogon
+    # if an IP address is not global, then it's a bogon,
+    # also multicast ip addresses are considered bogons...
     ip = ipaddress.ip_address(ip_address)
-    return not ip.is_global
+    return ip.is_private or ip.is_multicast or ip.is_reserverd
+
 
 def output_results(ip, args):
     if args.only_public or args.only_local:
@@ -77,3 +81,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
